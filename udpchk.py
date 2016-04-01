@@ -14,8 +14,11 @@
 # under the License.
 
 from __future__ import print_function
-import os
-import argparse
+import sys
+if sys.platform == 'win32' and (sys.version_info.major < 3
+                                or (sys.version_info.major == 3 and sys.version_info.minor < 4)):
+    # inet_pton is only supported on Windows since Python 3.4
+    import win_inet_pton
 import socket
 import socks
 
@@ -39,6 +42,8 @@ def test_udp(typ, addr, port, user=None, pwd=None):
 
 
 def main():
+    import os
+    import argparse
     def ip_port(string):
         value = int(string)
         if value <= 0 or value > 65535:
