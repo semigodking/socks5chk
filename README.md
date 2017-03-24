@@ -1,5 +1,5 @@
-udpchk - UDP Checker
---------------------
+socks5chk - Socks5 Ability Checker
+----------------------------------
 Simple scripts used for checking SOCKS5 proxy's support of TCP or UDP.
 
 Prerequisites
