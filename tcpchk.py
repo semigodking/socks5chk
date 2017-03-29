@@ -34,7 +34,7 @@ def test_tcp(typ, addr, port, user=None, pwd=None):
         s.send(req)
         rsp = s.recv(4096)
         if rsp.startswith("HTTP/1.1 200 OK"):
-            print("UDP check passed")
+            print("TCP check passed")
         else:
             print("Invalid response")
         s.close()
