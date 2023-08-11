@@ -9,6 +9,15 @@ Prerequisites
 * [argparse](https://pypi.python.org/pypi/argparse) (required for Python 2.6)
 * [win_inet_pton](https://pypi.python.org/pypi/win_inet_pton) (required for running Python 2.6-3.3 on Windows)
 
+Setup
+-----
+Run commands like below to setup environment for running script.
+```shell
+python3 -m venv venv
+source venv/bin/activate
+pip install pysocks
+```
+
 Usage
 -----
 Run command like this and check output.
