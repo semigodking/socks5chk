@@ -35,10 +35,10 @@ def test_udp(typ, addr, port, user=None, pwd=None):
             print("UDP check passed")
         else:
             print("Invalid response")
-    except socket.error as e:
-        print(repr(e))
     except socks.ProxyError as e:
         print(e.msg)
+    except socket.error as e:
+        print(repr(e))
 
 
 def main():

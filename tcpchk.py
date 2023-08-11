@@ -38,10 +38,10 @@ def test_tcp(typ, addr, port, user=None, pwd=None):
         else:
             print("Invalid response")
         s.close()
-    except socket.error as e:
-        print(repr(e))
     except socks.ProxyError as e:
         print(e.msg)
+    except socket.error as e:
+        print(repr(e))
 
 
 def main():
